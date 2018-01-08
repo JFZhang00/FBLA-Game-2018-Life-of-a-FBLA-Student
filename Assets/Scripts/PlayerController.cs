@@ -6,10 +6,12 @@ public class PlayerController : MonoBehaviour {
     
     public float speed = 5f;
     private Rigidbody2D rb;
+    private DialogueManager dMan;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
+        dMan = FindObjectOfType<DialogueManager>();
 	}
 	
 	// Update is called once per frame
@@ -38,6 +40,11 @@ public class PlayerController : MonoBehaviour {
         if (moveVertical < 0.5f && moveVertical > -0.5f)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0f);
+
+        }
+
+        if(dMan.dialogueActive){
+            rb.velocity = Vector2.zero;
 
         }
     
