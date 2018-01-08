@@ -11,6 +11,23 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1777714607573486}
   m_IsPrefabParent: 1
+--- !u!1 &1528178905719314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4202306971805654}
+  - component: {fileID: 61922829871320172}
+  - component: {fileID: 114299346050608586}
+  m_Layer: 0
+  m_Name: dialogueZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1777714607573486
 GameObject:
   m_ObjectHideFlags: 0
@@ -20,8 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4673409291497096}
   - component: {fileID: 212501038965663396}
-  - component: {fileID: 50691010251095260}
-  - component: {fileID: 114308793639493688}
   - component: {fileID: 60696842839892972}
   m_Layer: 0
   m_Name: PlayerModel
@@ -30,6 +45,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4202306971805654
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528178905719314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4673409291497096}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4673409291497096
 Transform:
   m_ObjectHideFlags: 1
@@ -37,32 +65,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1777714607573486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.18125033, y: -0.6906352, z: 0}
+  m_LocalPosition: {x: -9.77, y: 2.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4202306971805654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50691010251095260
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1777714607573486}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!60 &60696842839892972
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -87,22 +96,52 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.5742714, y: -0.19285017}
-      - {x: -0.55580217, y: -0.17895067}
-      - {x: -0.5536025, y: -1.2128109}
-      - {x: 0.5660064, y: -1.2201602}
---- !u!114 &114308793639493688
+    - - {x: 0.44607925, y: 1.308619}
+      - {x: -0.5259266, y: 1.3084736}
+      - {x: -0.5259628, y: 0.34138846}
+      - {x: 0.44280815, y: 0.34016013}
+--- !u!61 &61922829871320172
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528178905719314}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.07527399, y: -2.1425312}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.458722, y: 1.613214}
+  m_EdgeRadius: 0
+--- !u!114 &114299346050608586
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1777714607573486}
+  m_GameObject: {fileID: 1528178905719314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23ea2aabd7b0241d3b28f40359a1e46a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dd26b7ef6f8d4410bf3e63c59c4c23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
+  dialogue: Ouch
+  dialogueLines:
+  - Hey There!
+  - Are you in FBLA?
+  - Sweet!
+  - I have a few missions for you
 --- !u!212 &212501038965663396
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -132,8 +171,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 673659163
-  m_SortingLayer: 1
+  m_SortingLayerID: 1976042709
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1cadb51e8aa284f9da76b647980bb6ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

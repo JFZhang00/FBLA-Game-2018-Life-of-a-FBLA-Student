@@ -23,7 +23,10 @@ public class QuestManager : MonoBehaviour {
 	}
 
     public void ShowQuestText(string questText){
-        dMan.dialogueLines[dMan.currentLine] = questText;
+
+        dMan.dialogueLines = new string[1];
+        dMan.dialogueLines[0] = questText;
+
         dMan.currentLine = 0;
         dMan.ShowDialogue();
 

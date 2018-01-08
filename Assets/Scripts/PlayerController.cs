@@ -7,11 +7,22 @@ public class PlayerController : MonoBehaviour {
     public float speed = 5f;
     private Rigidbody2D rb;
     private DialogueManager dMan;
+    private static bool playerExists;
+
+    public string startPoint;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         dMan = FindObjectOfType<DialogueManager>();
+
+        if (!playerExists)
+        {
+            playerExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        } else {
+            Destroy(gameObject);
+        }
 	}
 	
 	// Update is called once per frame

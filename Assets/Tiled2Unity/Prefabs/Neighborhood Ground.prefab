@@ -181,10 +181,10 @@ MonoBehaviour:
   HexSideLength: 0
   NumLayers: 1
   NumTilesWide: 75
-  NumTilesHigh: 75
+  NumTilesHigh: 40
   TileWidth: 16
   TileHeight: 16
   ExportScale: 0.0625
   MapWidthInPixels: 1200
-  MapHeightInPixels: 1200
+  MapHeightInPixels: 640
   BackgroundColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
