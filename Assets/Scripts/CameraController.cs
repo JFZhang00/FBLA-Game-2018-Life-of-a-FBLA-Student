@@ -8,17 +8,17 @@ public class CameraController : MonoBehaviour {
     private Vector3 targetPos;
     public float moveSpeed;
     private static bool cameraExists;
-
+    public string cameraName;
 
     // Use this for initialization
     void Start()
     {
-        if (!cameraExists)
+        if (!cameraExists && gameObject.name.Equals("PlayerCamera"))
         {
             cameraExists = true;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(transform.gameObject);
         }
-        else
+        else 
         {
             Destroy(gameObject);
         }
@@ -27,7 +27,9 @@ public class CameraController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        targetPos = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z); //Assign position of target (the GameObject) to targetPos
-        transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime); //Moves from point A to point B with a speed. Lerp(Vector3 A, Vector3 B, Float Speed)
+            targetPos = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z); //Assign position of target (the GameObject) to targetPos
+            transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime); //Moves from point A to point B with a speed. Lerp(Vector3 A, Vector3 B, Float Speed)
+        
+        
     }
 }
