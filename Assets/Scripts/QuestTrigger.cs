@@ -21,7 +21,7 @@ public class QuestTrigger : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("COllision");
+        
         if (collision.gameObject.name == "Player" && !qMan.questCompleted[questNumber]){
                 if (startQuest && !qMan.quests[questNumber].gameObject.activeSelf){
                     qMan.quests[questNumber].gameObject.SetActive(true);
