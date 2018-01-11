@@ -9,24 +9,27 @@ public class MainMenu : MonoBehaviour {
     public GameObject Menu;
     public GameObject aboutMenu;
     public Camera cameraMenu;
-    public PlayerController player;
-    public GameUI gameui;
-    public bool menubool;
+    private PlayerController player;
 
+   /* void Awake()
+    {
+       
+
+
+    }
+*/
 
     // Use this for initialization
-    void start()
+    void Start()
     {
+        player = FindObjectOfType<PlayerController>();
 
-        if (player.openMenuNumber == 0)
+        if (player.openMenuNumber < 1)
         {
-            Debug.Log("Opening");
             cameraMenu.enabled = true;
             Menu.SetActive(true);
             aboutMenu.SetActive(false);
-        }
-        else
-        {
+        } else{
             Destroy(Menu);
         }
        
@@ -39,13 +42,10 @@ public class MainMenu : MonoBehaviour {
 	}
 
     public void PlayGame(){
-        player.openMenuNumber++;
-        menubool = gameui.gameUIExists;
-        gameui.menu.SetActive(menubool);
+        Debug.Log("Play Game");
         Menu.SetActive(false);
         cameraMenu.enabled = false;
-
-
+        player.openMenuNumber++;
     }
 
     public void AboutMenu(){

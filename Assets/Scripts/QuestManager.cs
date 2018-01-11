@@ -22,7 +22,6 @@ public class QuestManager : MonoBehaviour {
 		
 	}
 
-
     public void ShowQuestText(string questText){
 
         dMan.dialogueLines = new string[1];

@@ -12,12 +12,10 @@ public class DialogueManager : MonoBehaviour {
 
     public string[] dialogueLines;
     public int currentLine;
-    public bool dialogueManagerExists;
+
 
 	// Use this for initialization
 	void Start () {
-
-       
 	}
 	
 	// Update is called once per frame

@@ -12,14 +12,7 @@ public class PlayerController : MonoBehaviour {
     private static bool playerExists;
     private bool playerMoving;
     private Vector2 lastMove;
-    private QuitGame QuitMenu;
     public int openMenuNumber;
-    public bool isPause;
-    private MainMenu mainMenu;
-
-    public int money;
-    public int numberOfChocolates;
-
 
     public string startPoint;
 
@@ -29,8 +22,6 @@ public class PlayerController : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         dMan = FindObjectOfType<DialogueManager>();
         anim = GetComponent<Animator>();
-        QuitMenu = FindObjectOfType<QuitGame>();
-        mainMenu = FindObjectOfType<MainMenu>();
         openMenuNumber = 0;
 
         if (!playerExists)
@@ -47,13 +38,6 @@ public class PlayerController : MonoBehaviour {
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
         playerMoving = false;
-        isPause = QuitMenu.QuitOpen;
-
-        if (openMenuNumber == 1){
-            Destroy(mainMenu.Menu);
-        } else {
-            DontDestroyOnLoad(mainMenu.Menu);
-        }
       
 
         if (moveHorizontal > 0.5f || moveHorizontal < -0.5f)
@@ -81,8 +65,7 @@ public class PlayerController : MonoBehaviour {
 
         }
 
-
-        if (isPause){
+        if(dMan.dialogueActive){
             rb.velocity = Vector2.zero;
 
         }

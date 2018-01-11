@@ -9,32 +9,14 @@ EditorBuildSettings:
     path: 
     guid: ec70fe947120748e4a9e79a6c271a465
   - enabled: 1
-    path: Assets/Scenes/Neighborhood.unity
-    guid: c22fd919c9bc346428f4850ca79438b6
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: d3d25df55eca44c6b8524f7cc9a6400f
+  - enabled: 1
+    path: Assets/Scenes/Neighborhood.unity
+    guid: c22fd919c9bc346428f4850ca79438b6
   - enabled: 1
     path: Assets/Scenes/Home.unity
     guid: 253f9c8e74a444f17808760d3e406d51
   - enabled: 1
     path: Assets/Scenes/City.unity
     guid: c55ff3ef79855432381cb2d33fc21e96
-  - enabled: 1
-    path: Assets/Scenes/School.unity
-    guid: 641bc31fa843648f48c409ed09942c61
-  - enabled: 1
-    path: Assets/Scenes/Store.unity
-    guid: 60977a482a7474bdc80a00109c310187
-  - enabled: 1
-    path: Assets/Scenes/Home2.unity
-    guid: 061b7cff0f6fe4ab195ad890c328ea17
-  - enabled: 1
-    path: Assets/Scenes/Home3.unity
-    guid: c8f797980d51349d3b23ff912c5e1c58
-  - enabled: 1
-    path: Assets/Scenes/Home4.unity
-    guid: 8ad64f02960dd4349af55e87d75900a0
-  - enabled: 1
-    path: Assets/Scenes/EndScene.unity
-    guid: 960c38dfd92544127bb919714bc8d810
