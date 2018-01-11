@@ -733,7 +733,7 @@ Prefab:
         type: 2}
       propertyPath: menu
       value: 
-      objectReference: {fileID: 207237824}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c777c3249bda4dacbab85093b051e54, type: 2}
   m_IsPrefabParent: 0
@@ -822,12 +822,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &181939084 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114749203313088142, guid: 6c777c3249bda4dacbab85093b051e54,
-    type: 2}
-  m_PrefabInternal: {fileID: 181939081}
-  m_Script: {fileID: 11500000, guid: 23ea2aabd7b0241d3b28f40359a1e46a, type: 3}
 --- !u!1 &207237823
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +833,6 @@ GameObject:
   - component: {fileID: 207237827}
   - component: {fileID: 207237826}
   - component: {fileID: 207237825}
-  - component: {fileID: 207237824}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -847,24 +840,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &207237824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114373691506333114, guid: a248a1f824dc34569a9581aab4a35647,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 207237823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ba07b1de920a43af84f14348a2effca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Menu: {fileID: 207237823}
-  aboutMenu: {fileID: 1137641654}
-  cameraMenu: {fileID: 1167671104}
-  player: {fileID: 181939084}
-  gameui: {fileID: 1789600916}
-  menubool: 0
 --- !u!114 &207237825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1186,7 +1161,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 207237824}
+      - m_Target: {fileID: 0}
         m_MethodName: GoBack
         m_Mode: 1
         m_Arguments:
@@ -1410,7 +1385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &528153006
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2197,7 +2172,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1074919783
 RectTransform:
@@ -2235,9 +2210,6 @@ MonoBehaviour:
   Menu: {fileID: 207237823}
   aboutMenu: {fileID: 1137641654}
   cameraMenu: {fileID: 1167671104}
-  player: {fileID: 181939084}
-  gameui: {fileID: 1789600916}
-  menubool: 0
 --- !u!1 &1094248483
 GameObject:
   m_ObjectHideFlags: 0
