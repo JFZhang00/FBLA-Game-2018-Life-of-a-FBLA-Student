@@ -8,10 +8,20 @@ public class QuitGame : MonoBehaviour {
 
     public GameObject QuitPanel;
     public bool QuitOpen;
+    public bool quitGameExists;
 
     void Start()
     {
         QuitPanel.SetActive(false);
+        if (!quitGameExists)
+        {
+            quitGameExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            Destroy(QuitPanel);
+        }
     }
 
     void Update()
